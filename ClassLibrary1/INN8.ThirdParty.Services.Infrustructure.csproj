@@ -1,0 +1,12 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net5.0</TargetFramework>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\INN8.ThirdParty.Services\INN8.ThirdParty.Services.csproj" />
+    <ProjectReference Include="..\INN8.ThirdPartyApi.Dto\INN8.ThirdParty.Dto.csproj" />
+  </ItemGroup>
+
+</Project>
