@@ -9,7 +9,7 @@ namespace INN8.ThirdParty.Services.Infrustructure
 {
   public class AccountService : IAccountService
   {
-    public Task<GetAccountDetailsSBSResponseDto> GetAccountDetails(GetAccountDetailsSBSDto getAccountDetailsSBSDto)
+    public Task<GetAccountDetailsSBSResponseDto> GetAccountDetailsAsync(GetAccountDetailsSBSDto getAccountDetailsSBSDto)
     {
       return Task.FromResult(new GetAccountDetailsSBSResponseDto());
     }

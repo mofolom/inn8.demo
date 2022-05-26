@@ -1,4 +1,6 @@
 ﻿using INN8.Api.Dto;
+using INN8.ThirdParty.Dto;
+using System.Threading;
 using System.Threading.Tasks;
 
 namespace INN8.Application
@@ -12,11 +14,14 @@ namespace INN8.Application
       this.checkWithdrawalRules = checkWithdrawalRules;
     }
 
-    public Task<MaintainRegularContributionResponseDto> MaintainRegularContribution(MaintainRegularContributionDto contributionDto)
+    public async Task<MaintainRegularContributionResponseDto> ProcessAsync<MaintainRegularContributionResponseDto, MaintainRegularContributionDto>(MaintainRegularContributionDto input, CancellationToken cancellationToken)
+      where MaintainRegularContributionResponseDto : class, new()
+      where MaintainRegularContributionDto : class, new()
     {
-      checkWithdrawalRules.Process();
+      var request = new CheckWithdrawalRulesDto();
+      var res = await checkWithdrawalRules.ProcessAsync<CheckWithdrawalRulesResponseDto,CheckWithdrawalRulesDto>(request, cancellationToken);
 
-      return Task.FromResult(new MaintainRegularContributionResponseDto());
+      return new MaintainRegularContributionResponseDto();
     }
   }
 }

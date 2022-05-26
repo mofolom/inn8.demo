@@ -20,11 +20,19 @@ namespace INN8.WebApi.Controllers
       this.searchClient = searchClient;
     }
 
-    public async Task<IActionResult> SearchClient(SearchClientRequestDto searchClientDto, CancellationToken cancellationToken)
+    [HttpGet]
+    [Route("[action]/searchclient", Name = "SearchClient")]
+    public async Task<IActionResult> SearchClient(CancellationToken cancellationToken)
     {
-      var output = await searchClient.SearchClientAsync(searchClientDto, cancellationToken);
+      var t = Request;
+      var request = new SearchClientRequestDto
+      {
+        accountNo = "IA100639"
+      };
 
-      return Ok(output);
+      var result = await searchClient.ProcessAsync<SearchClientResponseDto, SearchClientRequestDto>(request, cancellationToken);
+
+      return Ok(result);
     }
   }
 }

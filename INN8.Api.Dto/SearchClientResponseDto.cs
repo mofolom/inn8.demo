@@ -10,5 +10,10 @@
       this.clientInfo = clientInfo;
       this.accInfo = accInfo;
     }
+
+    public SearchClientResponseDto()
+    {
+
+    }
   }
 }

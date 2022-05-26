@@ -1,13 +1,15 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	  <TargetFramework>net5.0</TargetFramework>
+    <TargetFramework>net5.0</TargetFramework>
   </PropertyGroup>
 
   <ItemGroup>
-    <ProjectReference Include="..\INN8.Api.Dto\INN8.Api.Dto.csproj" />
+    <PackageReference Include="Mapster" Version="7.3.0" />
+  </ItemGroup>
+
+  <ItemGroup>
     <ProjectReference Include="..\INN8.Application.Services\INN8.Application.Services.csproj" />
-    <ProjectReference Include="..\INN8.ThirdParty.Services\INN8.ThirdParty.Services.csproj" />
   </ItemGroup>
 
 </Project>
