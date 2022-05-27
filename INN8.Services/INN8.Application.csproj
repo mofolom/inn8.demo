@@ -1,13 +1,14 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-	  <TargetFramework>net5.0</TargetFramework>
+	  <TargetFramework>net6.0</TargetFramework>
+	  <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Core.NetStandard\INN8.Application.Core.csproj" />
     <ProjectReference Include="..\INN8.Api.Dto\INN8.Api.Dto.csproj" />
     <ProjectReference Include="..\INN8.Application.Services\INN8.Application.Services.csproj" />
-    <ProjectReference Include="..\INN8.ThirdParty.Services\INN8.ThirdParty.Services.csproj" />
   </ItemGroup>
 
 </Project>

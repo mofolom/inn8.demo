@@ -1,7 +1,19 @@
 <Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+	  <TargetFramework>net6.0</TargetFramework>
+	  <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\Core.NetStandard\INN8.Application.Core.csproj" />
+    <ProjectReference Include="..\INN8.ThirdPartyApi.Dto\INN8.ThirdParty.Dto.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ThirdParty\GIR\" />
+    <Folder Include="ThirdParty\Imago\" />
+    <Folder Include="ThirdParty\SBS\Account\" />
+  </ItemGroup>
 
 </Project>

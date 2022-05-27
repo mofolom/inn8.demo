@@ -1,5 +1,5 @@
 ﻿using INN8.Api.Dto;
-using INN8.Application;
+using INN8.Application.Client;
 using Microsoft.AspNetCore.Mvc;
 using System;
 using System.Collections.Generic;
@@ -9,20 +9,13 @@ using System.Threading.Tasks;
 
 namespace INN8.WebApi.Controllers
 {
-  [ApiController]
+    [ApiController]
   [Route("[controller]")]
   public class ClientController : ControllerBase
   {
-    private readonly ISearchClient searchClient;
-
-    public ClientController(ISearchClient searchClient)
-    {
-      this.searchClient = searchClient;
-    }
-
     [HttpGet]
-    [Route("[action]/searchclient", Name = "SearchClient")]
-    public async Task<IActionResult> SearchClient(CancellationToken cancellationToken)
+    [Route("SearchClient")]
+    public async Task<IActionResult> SearchClient([FromServices] ISearchClientDomainService searchClient ,CancellationToken cancellationToken)
     {
       var t = Request;
       var request = new SearchClientRequestDto
@@ -30,7 +23,7 @@ namespace INN8.WebApi.Controllers
         accountNo = "IA100639"
       };
 
-      var result = await searchClient.ProcessAsync<SearchClientResponseDto, SearchClientRequestDto>(request, cancellationToken);
+      var result = await searchClient.ProcessAsync(request, cancellationToken);
 
       return Ok(result);
     }

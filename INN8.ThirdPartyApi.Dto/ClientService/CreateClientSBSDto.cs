@@ -1,12 +1,12 @@
-﻿namespace INN8.ThirdParty.Dto
+﻿namespace INN8.ThirdParty.Dto.ClientService
 {
-  public class CreateClientSBSDto
-  {
+    public class CreateClientSBSDto
+    {
 
-  }
+    }
 
-  public class CreateClientSBSResponseDto
-  {
+    public class CreateClientSBSResponseDto
+    {
 
-  }
+    }
 }

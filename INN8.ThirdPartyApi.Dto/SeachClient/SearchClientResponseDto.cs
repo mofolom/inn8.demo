@@ -1,7 +1,7 @@
-﻿namespace INN8.ThirdPartyApi.Dto
+﻿namespace INN8.ThirdParty.Dto.SeachClient
 {
-  public class SearchClientResponseDto
-  {
+    public class SearchClientResponseDto
+    {
 
-  }
+    }
 }

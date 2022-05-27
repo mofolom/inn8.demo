@@ -1,15 +1,23 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
-    <TargetFramework>net5.0</TargetFramework>
+	  <TargetFramework>net6.0</TargetFramework>
+	  <ImplicitUsings>enable</ImplicitUsings>
   </PropertyGroup>
 
   <ItemGroup>
     <PackageReference Include="Mapster" Version="7.3.0" />
+    <PackageReference Include="Microsoft.Extensions.Http" Version="6.0.0" />
   </ItemGroup>
 
   <ItemGroup>
+    <ProjectReference Include="..\Core.NetStandard\INN8.Application.Core.csproj" />
     <ProjectReference Include="..\INN8.Application.Services\INN8.Application.Services.csproj" />
+    <ProjectReference Include="..\INN8.ThirdPartyApi.Dto\INN8.ThirdParty.Dto.csproj" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ThirdParty\SBS\Account\" />
   </ItemGroup>
 
 </Project>

@@ -1,9 +1,9 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-# Visual Studio Version 16
-VisualStudioVersion = 16.0.32413.511
+# Visual Studio Version 17
+VisualStudioVersion = 17.2.32519.379
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "INN8.Application.Domain", "Core.NetStandard\INN8.Application.Domain.csproj", "{C8AAD127-7371-4C68-AE5B-605A531683D2}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "INN8.Application.Core", "Core.NetStandard\INN8.Application.Core.csproj", "{C8AAD127-7371-4C68-AE5B-605A531683D2}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "INN8.Application", "INN8.Services\INN8.Application.csproj", "{FC022E1F-0234-40D6-BEA0-88DE9985CED0}"
 EndProject
@@ -13,13 +13,9 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "INN8.Api.Dto", "INN8.Api.Dt
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "INN8.ThirdParty.Dto", "INN8.ThirdPartyApi.Dto\INN8.ThirdParty.Dto.csproj", "{BDD2FFCC-F0C4-4A70-816D-17ECB9528F79}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "INN8.ThirdParty.Services", "INN8.ThirdParty.Services\INN8.ThirdParty.Services.csproj", "{F0DDAEDC-E6E6-4502-8695-161F9F7DD2F9}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "INN8.Application.Services", "INN8.Application.Services\INN8.Application.Services.csproj", "{AC3CEB78-4F6F-478E-8038-FDA16AFBFF9E}"
 EndProject
-Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "INN8.ThirdParty.Services.Infrustructure", "ClassLibrary1\INN8.ThirdParty.Services.Infrustructure.csproj", "{62314F98-0BC1-4DC1-9F61-9BDCBB616D75}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INN8.Application.Services", "INN8.Application.Services\INN8.Application.Services.csproj", "{AC3CEB78-4F6F-478E-8038-FDA16AFBFF9E}"
-EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "INN8.Application.Services.Infrastructure", "INN8.Application.Services.Infrastructure\INN8.Application.Services.Infrastructure.csproj", "{BB432AB2-BA39-43FD-A8E2-48F8521E5F56}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "INN8.Application.Services.Infrastructure", "INN8.Application.Services.Infrastructure\INN8.Application.Services.Infrastructure.csproj", "{BB432AB2-BA39-43FD-A8E2-48F8521E5F56}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
@@ -47,14 +43,6 @@ Global
 		{BDD2FFCC-F0C4-4A70-816D-17ECB9528F79}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{BDD2FFCC-F0C4-4A70-816D-17ECB9528F79}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{BDD2FFCC-F0C4-4A70-816D-17ECB9528F79}.Release|Any CPU.Build.0 = Release|Any CPU
-		{F0DDAEDC-E6E6-4502-8695-161F9F7DD2F9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{F0DDAEDC-E6E6-4502-8695-161F9F7DD2F9}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{F0DDAEDC-E6E6-4502-8695-161F9F7DD2F9}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{F0DDAEDC-E6E6-4502-8695-161F9F7DD2F9}.Release|Any CPU.Build.0 = Release|Any CPU
-		{62314F98-0BC1-4DC1-9F61-9BDCBB616D75}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{62314F98-0BC1-4DC1-9F61-9BDCBB616D75}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{62314F98-0BC1-4DC1-9F61-9BDCBB616D75}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{62314F98-0BC1-4DC1-9F61-9BDCBB616D75}.Release|Any CPU.Build.0 = Release|Any CPU
 		{AC3CEB78-4F6F-478E-8038-FDA16AFBFF9E}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
 		{AC3CEB78-4F6F-478E-8038-FDA16AFBFF9E}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{AC3CEB78-4F6F-478E-8038-FDA16AFBFF9E}.Release|Any CPU.ActiveCfg = Release|Any CPU
