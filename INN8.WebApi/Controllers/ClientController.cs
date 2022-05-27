@@ -10,22 +10,22 @@ using System.Threading.Tasks;
 namespace INN8.WebApi.Controllers
 {
     [ApiController]
-  [Route("[controller]")]
-  public class ClientController : ControllerBase
-  {
-    [HttpGet]
-    [Route("SearchClient")]
-    public async Task<IActionResult> SearchClient([FromServices] ISearchClientDomainService searchClient ,CancellationToken cancellationToken)
+    [Route("[controller]")]
+    public class ClientController : ControllerBase
     {
-      var t = Request;
-      var request = new SearchClientRequestDto
-      {
-        accountNo = "IA100639"
-      };
+        [HttpGet]
+        [Route("SearchClient")]
+        public async Task<IActionResult> SearchClient([FromServices] ISearchClientDomainService searchClient, CancellationToken cancellationToken)
+        {
+            var t = Request;
+            var request = new SearchClientRequestDto
+            {
+                accountNo = "IA100639"
+            };
 
-      var result = await searchClient.ProcessAsync(request, cancellationToken);
+            var result = await searchClient.ProcessAsync(request, cancellationToken);
 
-      return Ok(result);
+            return Ok(result);
+        }
     }
-  }
 }
